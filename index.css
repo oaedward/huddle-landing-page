@@ -249,6 +249,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .company__info {
     width: 24%;
 }
