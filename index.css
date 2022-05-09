@@ -41,8 +41,7 @@ body {
     border: none;
     color: black;
     border-radius: 20px;
-    width: 10%;
-    padding: 10px;
+    padding: 10px 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -50,6 +49,7 @@ body {
     display: flex;
     align-items: center;
     margin-inline: 80px;
+    gap: 80px;
 }
 
 .hero__bg {
@@ -57,10 +57,7 @@ body {
     object-fit: cover;
     width: 100%;
     height: 741px;
-}
 
-.hero__text {
-    margin-right: 80px;
 }
 
 .hero__text h1 {
@@ -92,31 +89,23 @@ body {
     outline: none;
     border: none;
     color: white;
-    border-radius: 20px;
-    padding: 12px;
-    width: 50%;
+    border-radius: 25px;
+    padding: 14px 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.together {
-    margin-inline: 80px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
+/* Section Layout */
 
-.together h3 {
-    margin-left: 90px;
-    padding-right: 90px;
-    padding-left: 50px;
+h3 {
     font-size: 28px;
     font-weight: 600;
     font-family: var(--ff-headings);
+    margin-left: 90px;
+    padding-right: 90px;
+    padding-left: 50px;
 }
 
-.together p {
+.section-paragraph {
     margin-left: 90px;
     padding-right: 90px;
     padding-left: 50px;
@@ -126,7 +115,16 @@ body {
     color: #808E9A;
 }
 
-.together img {
+.card__component {
+    margin-inline: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.card__image img {
     width: 440px;
     height: 440px;
     object-fit: contain;
@@ -134,93 +132,37 @@ body {
 }
 
 .conversation {
-    margin-inline: 80px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.conversation h3 {
-    margin-right: 90px;
-    padding-inline: 100px;
-    font-size: 28px;
-    font-weight: 600;
-    font-family: var(--ff-headings);
-}
-
-.conversation p {
-    margin-right: 90px;
-    padding-left: 90px;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: var(--ff-body);
-    color: #808E9A;
+    flex-direction: row-reverse;
 }
 
 .conversation img {
-    width: 440px;
-    height: 440px;
-    object-fit: contain;
     margin-left: 90px;
 }
 
-.user {
-    margin-inline: 80px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.user h3 {
-    margin-left: 90px;
-    padding-right: 90px;
-    padding-left: 50px;
-    font-size: 28px;
-    font-weight: 600;
-    font-family: var(--ff-headings);
-}
-
-.user p {
-    margin-left: 90px;
-    padding-right: 90px;
-    padding-left: 50px;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: var(--ff-body);
-    color: #808E9A;
-}
-
-.user img {
-    width: 440px;
-    height: 440px;
-    object-fit: contain;
-    margin-right: 90px;
-}
+/* CTA Section */
 
 .cta {
     display: flex;
     flex-direction: column;
-    margin-inline: 350px;
+    margin: 0 350px;
     margin-top: 160px;
+    justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     align-items: center;
     padding: 50px;
     position: relative;
     bottom: -100px;
-    z-index: 1000;
+    z-index: 1;
     background-color: white;
     border-radius: 16px;
 }
 
-.cta h3 {
+.cta h1 {
     font-size: 32px;
     font-family: var(--ff-headings);
     font-weight: 600;
     padding: 32px;
+    text-align: center;
 }
 
 .cta__btn {
@@ -231,11 +173,12 @@ body {
     outline: none;
     border: none;
     color: white;
-    border-radius: 20px;
-    padding: 12px;
-    width: 50%;
+    border-radius: 25px;
+    padding: 14px 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+/* Footer Section */
 
 .footer {
     background-color: #00252E;
@@ -277,55 +220,26 @@ body {
     display: flex;
 }
 
-.phone {
-    text-align: left;
-    padding-left: 0 16px;
+li {
+    list-style-type: none;
     font-family: var(--ff-body);
     font-weight: 400;
     font-size: 14px;
     margin-bottom: 16px;
 }
 
-.brand__info li {
-    list-style-type: none;
-    font-family: var(--ff-body);
-    font-weight: 400;
-    font-size: 14px;
-    margin-bottom: 16px;
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .company__info {
     width: 24%;
 }
 
-.company__info li {
-    list-style-type: none;
-    font-family: var(--ff-body);
-    font-weight: 400;
-    font-size: 14px;
-    margin-bottom: 16px;
-}
-
-.company__info a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
 
 .other__info {
     width: 24%;
-}
-
-.other__info li {
-    list-style-type: none;
-    font-family: var(--ff-body);
-    font-weight: 400;
-    font-size: 14px;
-    margin-bottom: 16px;
-}
-
-.other__info a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
 }
 
 .social__icons {
@@ -339,7 +253,7 @@ body {
     color: #fff;
 }
 
-.bi-facebook {
+.social__icons i {
     border-radius: 50%;
     border: 1px solid white;
     padding: 6px;
@@ -347,43 +261,13 @@ body {
     cursor: pointer;
 }
 
-.bi-facebook:hover {
+.social__icons i:hover {
     color: #FF52C1;
     transition-delay: .1s;
     border: 1px solid #FF52C1;
     transition-timing-function: ease-in-out;
 }
 
-.bi-twitter {
-    border-radius: 50%;
-    border: 1px solid white;
-    padding: 6px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.bi-twitter:hover {
-    color: #FF52C1;
-    transition-delay: .1s;
-    border: 1px solid #FF52C1;
-    transition-timing-function: ease-in-out;
-}
-
-
-.bi-instagram {
-    border-radius: 50%;
-    border: 1px solid white;
-    padding: 6px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.bi-instagram:hover {
-    color: #FF52C1;
-    transition-delay: .1s;
-    border: 1px solid #FF52C1;
-    transition-timing-function: ease-in-out;
-}
 
 @media only screen and (min-width: 375px) and (max-width: 600px) {
 
@@ -397,13 +281,14 @@ body {
     }
 
     .nav button {
-        font-size: 10;
-        width: 30%;
-        padding: 6px;
+        font-size: 10px;
+        text-align: center;
+        padding: 10px 25px;
     }
 
     .hero {
         flex-direction: column;
+        gap: 0;
         margin-inline: 0px;
     }
 
@@ -428,87 +313,38 @@ body {
     }
 
     .hero__btn {
-        width: 70%;
         margin-inline: 32px;
     }
 
-    .together {
+    /* Section Layout */
+
+    h3 {
+        margin-inline: 20px;
+        padding: 20px 16px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .section-paragraph {
+        margin-inline: 20px;
+        margin-bottom: 33px;
+        text-align: center;
+        padding-inline: 20px;
+        font-size: 14px;
+    }
+
+    .card__component {
         margin-inline: 20px;
         flex-direction: column-reverse;
     }
 
-    .together h3 {
-        margin-inline: 20px;
-        padding: 20px 16px;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .together p {
-        margin-inline: 20px;
-        margin-bottom: 33px;
-        text-align: center;
-        padding-inline: 20px;
-        font-size: 14px;
-    }
-
-    .together img {
+    .card__image img {
         width: 256px;
         height: 256px;
         margin: 40px 24px;
     }
 
-    .conversation {
-        margin-inline: 20px;
-        flex-direction: column;
-    }
-
-    .conversation h3 {
-        margin-inline: 20px;
-        padding: 20px 16px;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .conversation p {
-        margin-inline: 20px;
-        margin-bottom: 33px;
-        text-align: center;
-        padding-inline: 20px;
-        font-size: 14px;
-    }
-
-    .conversation img {
-        width: 256px;
-        height: 256px;
-        margin: 40px 24px;
-    }
-
-    .user {
-        margin-inline: 20px;
-        flex-direction: column-reverse;
-    }
-
-    .user h3 {
-        margin-inline: 20px;
-        padding: 20px 16px;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .user p {
-        margin-inline: 20px;
-        margin-bottom: 33px;
-        text-align: center;
-        padding-inline: 20px;
-        font-size: 14px;
-    }
-
-    .user img {
-        width: 256px;
-        height: 256px;
-        margin: 40px 24px;
-    }
+    /* CTA Section */
 
     .cta {
         margin-inline: 10px;
@@ -516,16 +352,16 @@ body {
         padding: 10px;
     }
 
-    .cta h3 {
+    .cta h1 {
         font-size: 16px;
         margin-top: 41px;
     }
 
     .cta__btn {
-        padding: 10px;
-        width: 60%;
         margin-bottom: 30px;
     }
+
+    /* Footer Section */
 
     .footer__wrapper {
         margin-inline: 16px;
@@ -551,15 +387,7 @@ body {
         font-size: 24px;
     }
 
-    .brand__info li {
-        margin-bottom: 24px;
-    }
-
-    .company__info li {
-        margin-bottom: 24px;
-    }
-
-    .other__info li {
+    li {
         margin-bottom: 24px;
     }
 
